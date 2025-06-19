@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento con React</title>
+
+    <style>
+        body, html {
+            display: flex;
+            flex-direction: column;
+            height: 99vh;
+            /* background: linear-gradient(to top, black, rgba(71, 2, 66, 0.918));
+            color: white; */
+        }
+
+        #galeria {
+            display: flex; 
+            padding: 5px;
+            margin: 0 auto;
+        }
+
+        .container {
+            display: flex; 
+            align-items: center; 
+            flex-direction: column; 
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .imagenes {
+            width: 300px;
+            height: 250px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="text-align: center;">Galer&iacute;a de im&aacute;genes</h1>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+        <input type="text" id="imagen-URL" placeholder="URL de la imagen">
+        <input type="text" id="pie-foto" placeholder="Pie de la foto">
+        <button onclick="agregaImagen()">Agregar Imágen</button>
+    </div>
+
+    <div id="galeria">
+
+        <div class="container 1">    
+            <img src="./imagenes/8516-universo.jpg" alt="imagen-1" class="imagenes">
+            <p>Universo</p>
+        </div>
+
+        <div class="container 2">    
+            <img src="./imagenes/Cielo estrellado.jpg" alt="imagen-2" class="imagenes">
+            <p>Cielo estrellado</p>
+        </div>
+
+        <div class="container 3">    
+            <img src="./imagenes/wallpaperflare.com_wallpaper (1).jpg" alt="imagen-3" class="imagenes">
+            <p>Cielo Violeta</p>
+        </div>
+
+        <div class="container 4">    
+            <img src="./imagenes/wallpaperflare.com_wallpaper (2).jpg" alt="imagen-4" class="imagenes">
+            <p>Contemplando las estrellas</p>
+        </div>
+
+        <div class="container 5">    
+            <img src="./imagenes/wallpaperflare.com_wallpaper (3).jpg" alt="imagen-5" class="imagenes">
+            <p>Azul como la noche</p>
+        </div>
+
+        <div class="container 6">    
+            <img src="./imagenes/wallpaperflare.com_wallpaper (4).jpg" alt="iamgen-6" class="imagenes">
+            <p>Durmiendo bajo las estrellas</p>
+        </div>
+
+    </div>
+
+    <script>
+
+        function agregaImagen() {
+            /** * @type {HTMLInputElement} */
+            let url = document.getElementById('imagen-URL')
+            /** * @type {HTMLInputElement} */
+            let pieFoto = document.getElementById('pie-foto')
+            /** * @type {HTMLDivElement} */
+            let galeria = document.getElementById('galeria')
+
+            if (!url.value && !pieFoto.value) 
+                alert('Por favor introduce una imagen y pie de foto')
+            else {
+                let div = document.createElement('div')
+                let img = document.createElement('img')
+                let p = document.createElement('p')
+
+                img.src = url.value
+                img.alt = 'imagen-7'
+                img.className = 'imagenes'
+                p.textContent = pieFoto.value
+
+                div.className = 'container 7'
+                div.appendChild(img)
+                div.appendChild(p)
+
+                galeria.appendChild(div)
+
+                url.value = ""
+                pieFoto.value = ""
+            }
+        }
+    </script>
+</body>
+</html>
