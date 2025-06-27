@@ -1,0 +1,96 @@
+Convenciones de nombres en React
+1. Componentes React
+Nombres de componentes deben usar PascalCase (Primera letra mayúscula, y mayúscula en cada palabra).
+
+                function HolaMundo() { ... }
+                const MiBoton = () => { ... }
+                class ListaDeUsuarios extends React.Component { ... }
+                Los componentes se nombran en singular o plural según lo que representen (ej. Usuario, ListaDeUsuarios).
+
+2. Funciones y variables internas (helpers, handlers)
+Usan camelCase (primera letra minúscula, mayúscula en palabras internas).
+
+                function calcularEdad() { ... }
+                const handleClick = () => { ... }
+                let contador = 0;
+                
+
+3. Props / Atributos de componentes
+                Usar camelCase para nombres de props.
+
+                <HolaMundo nombre="Erick" edad={30} esActivo={true} />
+                Los booleanos suelen nombrarse con prefijos como is, has, can para mayor claridad.
+
+                <Boton isDisabled={true} hasError={false} />
+
+
+4. Componentes estáticos (propiedades estáticas de clase)
+Normalmente en camelCase o en mayúsculas si son constantes.
+
+
+                class MiComponente extends React.Component {
+                static defaultProps = { ... }
+                static displayName = 'MiComponente'
+                }
+
+5. Nombres de archivos y módulos
+Archivos de componentes usan PascalCase para que coincida con el nombre del componente.
+
+                HolaMundo.jsx
+                ListaDeUsuarios.tsx
+                MiBoton.tsx
+                Archivos que exportan varias cosas o utilidades pueden usar camelCase o kebab-case según preferencia.
+
+                Ejemplo:
+
+                helpers.js
+                form-validators.ts
+
+
+
+6. Eventos y handlers
+Usar prefijo handle para funciones manejadoras y on para props.
+
+
+                <input onChange={handleInputChange} />
+
+                function handleInputChange(event) { ... }
+
+
+
+7. Constantes y enums
+Usar mayúsculas con guiones bajos (UPPER_SNAKE_CASE) para valores constantes.
+
+                const STATUS_ACTIVE = 'active';
+                const ROLES = { ADMIN: 'admin', USER: 'user' };
+
+
+
+
+8. Hooks personalizados
+Deben empezar con use y usar camelCase.
+
+                function useContador() { ... }
+                function useFetchDatos() { ... }
+
+
+
+
+
+Resumen rápido
+
+Componentes -	PascalCase	 - HolaMundo.jsx
+
+Funciones / Variables	- camelCase -	calcularEdad()
+
+Props / Atributos -	camelCase	- isDisabled, userId
+
+Archivos / Módulos -	PascalCase o camelCase/kebab-case -	MiBoton.tsx, utils.js
+
+Handlers  - handle + PascalCase -	handleClick
+
+Eventos (props)	- on + PascalCase	- onChange
+
+Constantes	- UPPER_SNAKE_CASE -	MAX_WIDTH
+
+Hooks personalizados -	use + camelCase -	useFetchData

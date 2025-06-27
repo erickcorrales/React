@@ -1,0 +1,21 @@
+Para ejecutar un programa con react se deben de ejecutar los comandos
+para que el servidor corra el programa, para el caso de:
+
+    - create-react-app: npm start
+
+    - vite: npm run dev
+
+
+
+Para crear los proyectos con estas herramienas son:
+
+    - create-react-app: npx create-react-app nombre-proyecto
+
+    - create-react-app con TS: npx create-react-app my-app --template typescript
+
+    - vite: npm create vute@latest my-app -- --template react
+
+    - vite con TS: npm create vite@latest my-app -- --template react-ts
+
+    *** Para vite despues de ejecutar el comando para crear el proyecto se 
+    debe de ejecutar el comando npm install y despues npm run dev
