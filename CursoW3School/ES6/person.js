@@ -10,5 +10,5 @@ export const age = 40
 const weight = 70
 const height = 1.76
 
-export {weight, height}
+export { weight, height }
 

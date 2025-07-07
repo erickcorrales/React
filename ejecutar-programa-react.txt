@@ -13,7 +13,7 @@ Para crear los proyectos con estas herramienas son:
 
     - create-react-app con TS: npx create-react-app my-app --template typescript
 
-    - vite: npm create vute@latest my-app -- --template react
+    - vite: npm create vite@latest my-app -- --template react
 
     - vite con TS: npm create vite@latest my-app -- --template react-ts
 
