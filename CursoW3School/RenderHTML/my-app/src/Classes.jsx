@@ -82,7 +82,7 @@ export class MotoHonda extends React.Component {
 // Mounting
 
 /* 
-    Mouting means putting elements into the dom
+    Mouting means putting elements into the DOM
     React has four built-in methods that gets called, in this order, When
     mouting a component
 
@@ -120,7 +120,7 @@ export class HeaderMounting extends React.Component {
 
 /* 
     A component is updated whenever there is a change in the component's state
-    or props. React has five built0in methods that gets called, in this order,
+    or props. React has five built-in methods that gets called, in this order,
     when a component is updated
 
         - getDerivedStateFromProps()

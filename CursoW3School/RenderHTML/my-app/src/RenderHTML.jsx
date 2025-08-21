@@ -27,10 +27,10 @@ function Moto() {
 */
 
 function Car(props) {
-    return <h2>I am a {props.color} {props.model } Car!</h2>
+    return <h2>I am a {props.color} {props.model} Car!</h2>
 }
 
-function Car1({ color='black', model='Camaro'}) {
+function Car1({ color='black', model='Camaro' }) {
     return <h1>I am a {color} {model} Car!</h1>
 }
 

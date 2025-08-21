@@ -11,3 +11,4 @@ function Adios() {
 const container = document.getElementById('mi-div')
 const root = ReactDOM.createRoot(container)
 root.render(<Hello />)
+root.render(<Adios />)

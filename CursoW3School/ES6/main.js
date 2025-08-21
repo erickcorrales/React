@@ -89,3 +89,10 @@ class Header1 {
 
 const myHeader1 = new Header1()
 console.log(myHeader1.changeColor())
+
+/* The map() Method */
+
+const numbers = [2, 3, 4, 5]
+const doubled = numbers.map(x => x * 2)
+
+console.log(numbers, '\n', doubled)
